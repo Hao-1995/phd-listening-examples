@@ -1,0 +1,24 @@
+:root{color-scheme:light;--ink:#242424;--muted:#626262;--rule:#d8d8d5;--paper:#fff;--canvas:#f6f6f4;--accent:#ae2235}
+*{box-sizing:border-box}
+body{margin:0;padding:40px 22px 50px;background:var(--canvas);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+main{max-width:1120px;margin:0 auto}
+.document{background:var(--paper);border:1px solid #e2e2df;padding:35px 43px 30px;min-height:580px}
+.excerpt-header{margin-bottom:11px}
+h1{font-size:1.38rem;line-height:1.34;font-weight:500;letter-spacing:-.012em;margin:0;max-width:800px}
+.meta{margin:0 0 24px;color:#4e4e4e;font-size:.97rem}
+.audio-block{display:flex;align-items:center;justify-content:center;min-height:42px;margin-bottom:16px}
+audio{display:block;width:360px;max-width:100%;height:42px;margin:0 auto}
+.viewer{width:50%;margin:0 auto;background:#f8f8f7;border:1px solid var(--rule)}
+.score-stage{padding:8px}
+.score-page a{display:block;line-height:0}
+.score-page img{display:block;width:100%;height:auto;background:#fff;border:1px solid #d6d6d2}
+.score-note{margin:12px 0 0;font-size:.81rem;color:#757575;font-style:italic}
+footer{margin:21px 0 0;color:#747474;font-family:Arial,Helvetica,sans-serif;font-size:.74rem;line-height:1.6}
+.pending-audio{font:13px/1.6 Arial,Helvetica,sans-serif;color:#777;text-align:center;margin:0}
+.pending-score{display:flex;align-items:center;justify-content:center;min-height:320px;background:#fdfdfc;border:1px solid #e4e4e1;color:#858585;font:13px/1.6 Arial,Helvetica,sans-serif;text-align:center;padding:24px}
+.pending-image-note{margin-top:12px;color:#777;font-size:.81rem;font-style:italic}
+.media-error{display:none}
+.media-error.show{display:block}
+@media(max-width:800px){body{padding:18px 12px 28px}.document{padding:24px 22px}h1{font-size:1.2rem}.score-stage{padding:7px}.viewer{width:70%}}
+@media(max-width:560px){.meta{margin-bottom:18px}.viewer{width:100%}.pending-score{min-height:240px}}
+@media print{.viewer{width:50%}body{background:#fff;padding:0}.document{border:0;padding:0}.pending-score{border:1px solid #eee}audio{display:none}.viewer{break-inside:avoid}}
