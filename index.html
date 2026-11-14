@@ -1,69 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f6f6f4">
-<title>Gao Ping: Si Bu Xiang — Listening Excerpt | PhD Thesis Supplementary Material</title>
-<style>
-:root{color-scheme:light;--ink:#242424;--muted:#626262;--rule:#d8d8d5;--paper:#fff;--canvas:#f6f6f4;--accent:#ae2235}
-*{box-sizing:border-box}
-body{margin:0;padding:40px 22px 50px;background:var(--canvas);color:var(--ink);font:1rem/1.55 Georgia,"Times New Roman",serif;-webkit-font-smoothing:antialiased}
-main{max-width:1120px;margin:0 auto}
-.document{background:var(--paper);border:1px solid #e2e2df;padding:35px 43px 30px}
-h1{font-size:1.38rem;line-height:1.34;font-weight:500;letter-spacing:-.012em;margin:0 0 10px}
-.meta{margin:0 0 24px;color:#4e4e4e;font-size:.97rem}
-.audio-block{position:relative;display:flex;align-items:center;justify-content:center;min-height:42px;margin-bottom:16px}
-audio{display:block;width:360px;max-width:100%;height:42px;margin:0 auto}
-.pager-corner{position:absolute;right:0;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:7px;white-space:nowrap;font-family:Arial,Helvetica,sans-serif}
-.page-indicator{font-size:.77rem;line-height:30px;color:#606060;margin-right:9px;font-variant-numeric:tabular-nums}
-.page-btn{display:inline-flex;align-items:center;justify-content:center;width:29px;height:29px;padding:5px;background:#fff;border:1px solid #bdbdb9;border-radius:2px;color:#282828;cursor:pointer}
-.page-btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.page-btn:hover:not(:disabled){background:#f0f0ef;border-color:#737373}
-.page-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.page-btn:disabled{opacity:.34;cursor:default}
-.viewer{width:50%;margin:0 auto;background:#f8f8f7;border:1px solid var(--rule)}
-.score-stage{padding:8px}
-.score-page{display:none}.score-page.active{display:block}
-.score-page a{display:block;line-height:0}
-.score-page img{display:block;width:100%;height:auto;background:#fff;border:1px solid #d6d6d2}
-.score-note{margin:12px 0 0;font-size:.81rem;color:#757575;font-style:italic}
-footer{margin:21px 0 0;color:#747474;font: .74rem/1.6 Arial,Helvetica,sans-serif}
-@media(max-width:800px){body{padding:18px 12px 28px}.document{padding:24px 22px}h1{font-size:1.2rem}.viewer{width:70%}.audio-block{flex-direction:column;gap:11px;margin-bottom:16px}.pager-corner{position:static;transform:none;align-self:flex-end}}
-@media(max-width:560px){.meta{margin-bottom:18px}.viewer{width:100%}}
-@media print{.viewer{width:50%}body{background:#fff;padding:0}.document{border:0;padding:0}.page-btn,audio{display:none}}
-</style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A chapter-by-chapter index of supplementary musical excerpts with audio and score material accompanying a doctoral thesis.">
+<meta name="theme-color" content="#f6f7f7">
+<title>Musical Excerpts | PhD Thesis Supplementary Materials</title>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<main><article class="document" id="gao-a1">
-<h1>Musical Excerpt XX in 5.2.1 Foregrounding the dizi and piano</h1>
-<p class="meta">Gao Ping, <em>Si Bu Xiang</em> — bars 70–83 (1:50–2:06)</p>
-<div class="audio-block" aria-label="Audio playback and score navigation">
-<audio id="excerptAudio" controls preload="metadata">
-<source src="phd-listening-examples-ready/audio/gao-a1.mp3" type="audio/mpeg">
-Your browser does not support HTML5 audio.
-</audio>
-<nav class="pager-corner" aria-label="Score page navigation">
-<span class="page-indicator" id="pageIndicator" role="status" aria-live="polite">Page 1 of 2</span>
-<button type="button" class="page-btn" id="prevBtn" disabled aria-label="Previous score page" title="Previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-<button type="button" class="page-btn" id="nextBtn" aria-label="Next score page" title="Next page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-</nav></div>
-<div class="viewer" aria-label="Two-page score viewer"><div class="score-stage">
-<div class="score-page active" data-page="1"><a href="phd-listening-examples-ready/images/gao-bars70-79-page1.png" target="_blank" rel="noopener noreferrer" aria-label="Open score page 1 at full size in a new tab"><img src="phd-listening-examples-ready/images/gao-bars70-79-page1.png" alt="Score page 1 from Gao Ping's Si Bu Xiang, bars 70–79."></a></div>
-<div class="score-page" data-page="2" aria-hidden="true"><a href="phd-listening-examples-ready/images/gao-bars80-83-page2.png" target="_blank" rel="noopener noreferrer" aria-label="Open score page 2 at full size in a new tab" tabindex="-1"><img src="phd-listening-examples-ready/images/gao-bars80-83-page2.png" alt="Score page 2 from Gao Ping's Si Bu Xiang, bars 80–83."></a></div>
-</div></div>
-<p class="score-note">Select the score image to view it at full resolution.</p>
-<footer>Research supplementary material. Audio and notation copyrights remain with their respective rights holders.</footer>
-</article></main>
-<script>
-(function(){
-const pages=Array.from(document.querySelectorAll(".score-page"));
-const prevBtn=document.getElementById("prevBtn"),nextBtn=document.getElementById("nextBtn"),indicator=document.getElementById("pageIndicator");
-let current=0;
-function render(){pages.forEach((page,index)=>{const selected=index===current;page.classList.toggle("active",selected);page.setAttribute("aria-hidden",String(!selected));page.querySelector("a").tabIndex=selected?0:-1});prevBtn.disabled=current===0;nextBtn.disabled=current===pages.length-1;indicator.textContent="Page "+(current+1)+" of "+pages.length}
-prevBtn.addEventListener("click",()=>{if(current>0){current--;render()}});
-nextBtn.addEventListener("click",()=>{if(current<pages.length-1){current++;render()}});
-render();
-}());
-</script>
+<header class="topbar"><div class="shell"><a class="mark" href="./" aria-label="Musical excerpts home">PhD · Listening Archive</a><span class="topbar-note">Thesis supplementary material</span></div></header>
+<main class="shell">
+<section class="hero"><p class="eyebrow">Audio &amp; scores · Supplementary materials</p><h1>Musical Excerpts</h1>
+<p class="lead">A chapter-by-chapter directory of musical excerpts referenced in the thesis. Each excerpt has a dedicated page for audio playback and the accompanying score.</p>
+<p class="summary">6 excerpt pages across 3 chapters · Content is being prepared</p></section>
+<div class="chapter-list" aria-label="Musical excerpts by chapter"><section class="chapter-card" aria-labelledby="chapter-01"><div class="chapter-heading"><h2 id="chapter-01">Chapter 1</h2><span class="chapter-count">1 excerpt</span></div><ul class="excerpt-list"><li><a class="excerpt-link" href="chapter-01/excerpt-01/" aria-label="Chapter 1, Excerpt 1: open placeholder page"><span><span class="excerpt-name">Musical Excerpt 1</span><span class="excerpt-sub">Chapter 1 · Audio and score</span></span><span class="right"><span class="status">Not yet uploaded</span><span class="arrow" aria-hidden="true">↗</span></span></a></li></ul></section>
+<section class="chapter-card" aria-labelledby="chapter-05"><div class="chapter-heading"><h2 id="chapter-05">Chapter 5</h2><span class="chapter-count">3 excerpts</span></div><ul class="excerpt-list"><li><a class="excerpt-link" href="chapter-05/excerpt-01/" aria-label="Chapter 5, Excerpt 1: open placeholder page"><span><span class="excerpt-name">Musical Excerpt 1</span><span class="excerpt-sub">Chapter 5 · Audio and score</span></span><span class="right"><span class="status">Not yet uploaded</span><span class="arrow" aria-hidden="true">↗</span></span></a></li><li><a class="excerpt-link" href="chapter-05/excerpt-02/" aria-label="Chapter 5, Excerpt 2: open placeholder page"><span><span class="excerpt-name">Musical Excerpt 2</span><span class="excerpt-sub">Chapter 5 · Audio and score</span></span><span class="right"><span class="status">Not yet uploaded</span><span class="arrow" aria-hidden="true">↗</span></span></a></li><li><a class="excerpt-link" href="chapter-05/excerpt-03/" aria-label="Chapter 5, Excerpt 3: open placeholder page"><span><span class="excerpt-name">Musical Excerpt 3</span><span class="excerpt-sub">Chapter 5 · Audio and score</span></span><span class="right"><span class="status">Not yet uploaded</span><span class="arrow" aria-hidden="true">↗</span></span></a></li></ul></section>
+<section class="chapter-card" aria-labelledby="chapter-06"><div class="chapter-heading"><h2 id="chapter-06">Chapter 6</h2><span class="chapter-count">2 excerpts</span></div><ul class="excerpt-list"><li><a class="excerpt-link" href="chapter-06/excerpt-01/" aria-label="Chapter 6, Excerpt 1: open placeholder page"><span><span class="excerpt-name">Musical Excerpt 1</span><span class="excerpt-sub">Chapter 6 · Audio and score</span></span><span class="right"><span class="status">Not yet uploaded</span><span class="arrow" aria-hidden="true">↗</span></span></a></li><li><a class="excerpt-link" href="chapter-06/excerpt-02/" aria-label="Chapter 6, Excerpt 2: open placeholder page"><span><span class="excerpt-name">Musical Excerpt 2</span><span class="excerpt-sub">Chapter 6 · Audio and score</span></span><span class="right"><span class="status">Not yet uploaded</span><span class="arrow" aria-hidden="true">↗</span></span></a></li></ul></section></div>
+</main>
+<footer class="footer"><div class="shell"><span>PhD Thesis · Musical Excerpts</span><span>Audio and notation rights remain with their respective rights holders.</span></div></footer>
 </body></html>
