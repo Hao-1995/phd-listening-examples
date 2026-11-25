@@ -1,13 +1,238 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f6f6f4"><meta name="description" content="Musical Excerpt 1 in Chapter 5. Supplementary music audio and score for Hao Wu's PhD thesis."><title>Musical Excerpt 1 in Chapter 5 | PhD Thesis Supplementary Material</title><link rel="stylesheet" href="../../assets/excerpt.css"></head>
-<body><main><article class="document" id="chapter-05-excerpt-01">
-<div class="excerpt-header"><h1>Musical Excerpt 1 in Chapter 5</h1></div>
-<p class="meta">Work, bars and timing: [to be added]</p>
-<div class="audio-block" aria-label="Audio playback"><p class="pending-audio" role="status">Audio excerpt to be added.</p></div>
-<div class="viewer" aria-label="Score viewer"><div class="score-stage"><div class="pending-score" role="status">Score image to be added.</div></div></div>
-<p class="score-note">The corresponding score will appear here when available.</p>
-<footer>Research supplementary material. Audio and notation copyrights remain with their respective rights holders.</footer>
-</article></main>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f6f4">
+  <title>Musical Excerpt 1 in Chapter 5 (Figure 5.1) | PhD Thesis Supplementary Material</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #242424;
+      --muted: #626262;
+      --rule: #d8d8d5;
+      --paper: #ffffff;
+      --canvas: #f6f6f4;
+      --accent: #ae2235;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 40px 22px 50px;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: Georgia, 'Times New Roman', serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 1120px; margin: 0 auto; }
+    .document {
+      background: var(--paper);
+      border: 1px solid #e2e2df;
+      padding: 35px 43px 30px;
+    }
+    .excerpt-header {
+      margin-bottom: 11px;
+    }
+    h1 {
+      font-size: 1.38rem;
+      line-height: 1.34;
+      font-weight: 500;
+      letter-spacing: -0.012em;
+      margin: 0;
+      max-width: 800px;
+    }
+    .pager-corner {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 7px;
+      white-space: nowrap;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .page-indicator {
+      font-size: 0.77rem;
+      line-height: 30px;
+      color: #606060;
+      margin-right: 9px;
+      font-variant-numeric: tabular-nums;
+    }
+    .page-btn {
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 29px;
+      height: 29px;
+      padding: 5px;
+      background: #fff;
+      border: 1px solid #bdbdb9;
+      border-radius: 2px;
+      color: #282828;
+      cursor: pointer;
+      transition: background-color .15s, border-color .15s;
+    }
+    .page-btn svg {
+      display: block;
+      width: 15px;
+      height: 15px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .page-btn:hover:not(:disabled) { background: #f0f0ef; border-color: #737373; }
+    .page-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .page-btn:disabled { opacity: 0.34; cursor: default; }
+    .meta {
+      margin: 0 0 24px;
+      color: #4e4e4e;
+      font-size: 0.97rem;
+    }
+    .audio-block {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      margin-bottom: 16px;
+    }
+    audio {
+      display: block;
+      width: 360px;
+      max-width: 100%;
+      height: 42px;
+      margin: 0 auto;
+    }
+    .viewer {
+      width: 50%;
+      margin: 0 auto;
+      background: #f8f8f7;
+      border: 1px solid var(--rule);
+    }
+    .score-stage { padding: 8px; }
+    .score-page { display: none; }
+    .score-page.active { display: block; }
+    .score-page a { display: block; line-height: 0; }
+    .score-page img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #fff;
+      border: 1px solid #d6d6d2;
+    }
+    .score-note {
+      margin: 12px 0 0;
+      font-size: .81rem;
+      color: #757575;
+      font-style: italic;
+    }
+    footer {
+      margin: 21px 0 0;
+      color: #747474;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.74rem;
+      line-height: 1.6;
+    }
+    @media (max-width: 800px) {
+      body { padding: 18px 12px 28px; }
+      .document { padding: 24px 22px; }
+      h1 { font-size: 1.2rem; }
+      .page-indicator { margin-right: 3px; }
+      .score-stage { padding: 7px; }
+      .viewer { width: 70%; }
+      .audio-block { flex-direction: column; gap: 11px; margin-bottom: 16px; }
+      .pager-corner { position: static; transform: none; align-self: flex-end; }
+    }
+    @media (max-width: 560px) {
+      .meta { margin-bottom: 18px; }
+      .viewer { width: 100%; }
+    }
+    @media print {
+      .viewer { width: 50%; }
+      body { background: #fff; padding: 0; }
+      .document { border: 0; padding: 0; }
+      .page-btn, audio { display: none; }
+      .viewer { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article class="document" id="excerpt-01">
+      <div class="excerpt-header">
+        <h1>Musical Excerpt 1 in 5.2.1 Foregrounding the dizi and piano (Figure 5.1)</h1>
+      </div>
+      <p class="meta">Gao Ping, <em>Si Bu Xiang</em> — movement I, bars 70–83 (1:50–2:06)</p>
 
-</body></html>
+      <div class="audio-block" aria-label="Audio playback and score navigation">
+        <audio id="excerptAudio" controls preload="metadata">
+          <source src="audio/sibuxiang-01m50s-02m06s.mp3" type="audio/mpeg">
+          Your browser does not support HTML5 audio.
+        </audio>
+        <nav class="pager-corner" aria-label="Score page navigation">
+                  <span class="page-indicator" id="pageIndicator" role="status" aria-live="polite">Page 1 of 2</span>
+                  <button type="button" class="page-btn" id="prevBtn" disabled aria-label="Previous score page" title="Previous page">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                  </button>
+                  <button type="button" class="page-btn" id="nextBtn" aria-label="Next score page" title="Next page">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                </nav>
+      </div>
+
+      <div class="viewer" aria-label="2-page score viewer">
+        <div class="score-stage">
+          <div class="score-page active" data-page="1" aria-hidden="false">
+            <a href="images/1.png" target="_blank" rel="noopener noreferrer" aria-label="Open score page 1 at full size in a new tab">
+              <img src="images/1.png" alt="Score excerpt from Gao Ping, Si Bu Xiang (movement I, bars 70–83), page 1 of 2.">
+            </a>
+          </div>
+          <div class="score-page" data-page="2" aria-hidden="true">
+            <a href="images/2.png" target="_blank" rel="noopener noreferrer" aria-label="Open score page 2 at full size in a new tab" tabindex="-1">
+              <img src="images/2.png" alt="Score excerpt from Gao Ping, Si Bu Xiang (movement I, bars 70–83), page 2 of 2.">
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="score-note">Select the score image to view it at full resolution.</p>
+      <footer>Research supplementary material. Audio and notation copyrights remain with their respective rights holders.</footer>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      const pages = Array.from(document.querySelectorAll('.score-page'));
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const indicator = document.getElementById('pageIndicator');
+      let current = 0;
+
+      function render() {
+        pages.forEach((page, index) => {
+          const selected = index === current;
+          page.classList.toggle('active', selected);
+          page.setAttribute('aria-hidden', String(!selected));
+          page.querySelector('a').tabIndex = selected ? 0 : -1;
+        });
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === pages.length - 1;
+        indicator.textContent = `Page ${current + 1} of ${pages.length}`;
+      }
+
+      prevBtn.addEventListener('click', function () {
+        if (current > 0) { current--; render(); }
+      });
+      nextBtn.addEventListener('click', function () {
+        if (current < pages.length - 1) { current++; render(); }
+      });
+      render();
+    }());
+  </script>
+</body>
+</html>
